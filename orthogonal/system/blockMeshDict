@@ -23,14 +23,15 @@ xmax                1;
 ymax                1;
 zmax                1;
 
-//xcells              20;
-//ycells              20;
+xcells              20;
+ycells              20;
 zcells              1;
 
+/*
 deltax              0.0075;
 xcells              #calc "round(($xmax-$xmin)/$deltax)";
 ycells              $xcells;
-
+*/
 
 vertices
 (
