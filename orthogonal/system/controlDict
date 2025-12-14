@@ -13,7 +13,7 @@ FoamFile
     object          controlDict;
 }
 
-// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //67686767676767686767674676766766767676767
 application         foamRun;
 
 solver              incompressibleFluid;
@@ -44,6 +44,83 @@ timeFormat          general;
 
 timePrecision       6;
 
-runTimeModifiable   true;
+runTimeModifiable   true;   //controlDict is re-read before each time step allowing to modify parameterrs during simulation
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+functions
+{
+    minmaxDomainScalar
+    {
+        type            volFieldValue;
+
+        libs            ("libfieldFunctionObjects.so");
+
+        log             true;   //writes to screen
+
+        writeControl    timeStep;
+
+        writeInterval   1;
+
+        writeFields     true;
+
+        select          all;
+
+        operation       none;
+
+        fields  
+        (
+            U
+        );
+    }
+
+    minmaxDomainVector
+    {
+        type            volFieldValue;
+
+        libs            ("libfieldFunctionObjects.so");
+
+        log             true;   //writes to screen
+
+        writeControl    timeStep;
+
+        writeInterval   1;
+
+        writeFields     true;
+
+        select          all;
+
+        operation       none;
+
+        fields
+        (
+            p
+        );
+    }
+
+    minVelocity
+    {
+        $minmaxDomainVector;
+        operation   minMag;
+    }
+
+    maxVelocity
+    {
+        $minmaxDomainVector;
+        operation   maxMag;
+    }
+
+    minPressure
+    {
+        $minmaxDomainScalar;
+        operation   min;
+    }
+
+    maxPressure
+    {
+        $minmaxDomainScalar;
+        operation   max;
+    }
+}
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
