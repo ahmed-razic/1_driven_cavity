@@ -5,7 +5,6 @@
      \\  /    A nd           | Version:  13
       \\/     M anipulation  |
 \*---------------------------------------------------------------------------*/
-
 FoamFile
 {
     format          ascii;
@@ -14,6 +13,7 @@ FoamFile
 }
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //67686767676767686767674676766766767676767
+
 application         foamRun;
 
 solver              incompressibleFluid;
