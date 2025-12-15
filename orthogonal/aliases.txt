@@ -1,0 +1,8 @@
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias t2='tree -L 2'
+alias t3='tree -L 3'
+alias lg='ls --group-directories-first -la'
+alias pd='PROMPT_DIRTRIM=1'
+alias pd2='PROMPT_DIRTRIM=2'
