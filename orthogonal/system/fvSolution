@@ -33,7 +33,7 @@ solvers
     "(U).*"                 //"(U|k|epsilon|omega|R|nuTilda)"
     {
         solver          smoothSolver;
-        smoothSolver    symGaussSeidel;
+        smoother        symGaussSeidel;
         tolerance       1e-08;
         relTol          0;
         minIter         2;
