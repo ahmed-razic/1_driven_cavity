@@ -9,3 +9,5 @@ foamRun | tee log.solver
 foamPostProcess -func sampleDict -latestTime
 
 gnuplot gnuplot/gnuplotScript
+
+paraview drivenCavity.foam

@@ -1,0 +1,359 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  13
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 13-cde978a97c93
+Exec   : foamRun
+Date   : Dec 17 2025
+Time   : 20:28:39
+Host   : "HOME"
+PID    : 17185
+I/O    : uncollated
+Case   : /home/ahmed/OpenFOAM/ahmed-13/run/transitioning/1_driven_cavity
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Selecting solver incompressibleFluid
+Selecting viscosity model constant
+Selecting turbulence model type laminar
+    Selecting laminar stress model Stokes
+No MRF models present
+
+Courant Number mean: 0 max: 0
+
+PIMPLE: No convergence criteria found
+
+
+PIMPLE: Operating solver in transient mode with 1 outer corrector
+PIMPLE: Operating solver in PISO mode
+
+
+
+Starting time loop
+
+--> FOAM Warning : 
+    From function bool Foam::generatedCellZone::read(const Foam::dictionary&)
+    in file zoneGenerators/cell/generatedCellZone/generatedCellZone.C at line 144
+    Reading "/home/ahmed/OpenFOAM/ahmed-13/run/transitioning/1_driven_cavity/system/functions/minmaxDomainScalar" at line 74
+    select all is deprecated, use cellZone instead.
+volFieldValue minmaxDomainScalar read:
+    number of cells = 100
+    volume = 1
+    operation = none
+
+--> FOAM Warning : 
+    From function bool Foam::generatedCellZone::read(const Foam::dictionary&)
+    in file zoneGenerators/cell/generatedCellZone/generatedCellZone.C at line 144
+    Reading "/home/ahmed/OpenFOAM/ahmed-13/run/transitioning/1_driven_cavity/system/functions/minmaxDomainVector" at line 98
+    select all is deprecated, use cellZone instead.
+volFieldValue minmaxDomainVector read:
+    number of cells = 100
+    volume = 1
+    operation = none
+
+--> FOAM Warning : 
+    From function bool Foam::generatedCellZone::read(const Foam::dictionary&)
+    in file zoneGenerators/cell/generatedCellZone/generatedCellZone.C at line 144
+    Reading "/home/ahmed/OpenFOAM/ahmed-13/run/transitioning/1_driven_cavity/system/functions/minVelocity" at line 98
+    select all is deprecated, use cellZone instead.
+volFieldValue minVelocity read:
+    number of cells = 100
+    volume = 1
+    operation = minMag
+
+--> FOAM Warning : 
+    From function bool Foam::generatedCellZone::read(const Foam::dictionary&)
+    in file zoneGenerators/cell/generatedCellZone/generatedCellZone.C at line 144
+    Reading "/home/ahmed/OpenFOAM/ahmed-13/run/transitioning/1_driven_cavity/system/functions/maxVelocity" at line 98
+    select all is deprecated, use cellZone instead.
+volFieldValue maxVelocity read:
+    number of cells = 100
+    volume = 1
+    operation = maxMag
+
+--> FOAM Warning : 
+    From function bool Foam::generatedCellZone::read(const Foam::dictionary&)
+    in file zoneGenerators/cell/generatedCellZone/generatedCellZone.C at line 144
+    Reading "/home/ahmed/OpenFOAM/ahmed-13/run/transitioning/1_driven_cavity/system/functions/minPressure" at line 74
+    select all is deprecated, use cellZone instead.
+volFieldValue minPressure read:
+    number of cells = 100
+    volume = 1
+    operation = min
+
+--> FOAM Warning : 
+    From function bool Foam::generatedCellZone::read(const Foam::dictionary&)
+    in file zoneGenerators/cell/generatedCellZone/generatedCellZone.C at line 144
+    Reading "/home/ahmed/OpenFOAM/ahmed-13/run/transitioning/1_driven_cavity/system/functions/maxPressure" at line 74
+    select all is deprecated, use cellZone instead.
+volFieldValue maxPressure read:
+    number of cells = 100
+    volume = 1
+    operation = max
+
+
+
+volFieldValue minVelocity write:
+    minMag(all) of p = 0 at location (0.05 0.05 0.5) in cell 0
+
+volFieldValue maxVelocity write:
+    maxMag(all) of p = 0 at location (0.05 0.05 0.5) in cell 0
+
+volFieldValue minPressure write:
+    min(all) of U = (0 0 0)
+
+volFieldValue maxPressure write:
+    max(all) of U = (0 0 0)
+
+Courant Number mean: 0 max: 0
+Time = 1s
+
+smoothSolver:  Solving for Ux, Initial residual = 1, Final residual = 3.38654e-09, No Iterations 14
+smoothSolver:  Solving for Uy, Initial residual = 0.99928, Final residual = 7.83124e-09, No Iterations 12
+DICPCG:  Solving for p, Initial residual = 1, Final residual = 9.71391e-07, No Iterations 18
+DICPCG:  Solving for p, Initial residual = 4.66818e-07, Final residual = 4.66818e-07, No Iterations 0
+time step continuity errors : sum local = 1.29307e-07, global = -6.85758e-18, cumulative = -6.85758e-18
+ExecutionTime = 0.071613 s  ClockTime = 0 s
+
+
+
+volFieldValue minVelocity write:
+    minMag(all) of p = 1.5859e-09 at location (0.05 0.05 0.5) in cell 0
+
+volFieldValue maxVelocity write:
+    maxMag(all) of p = 0.194871 at location (0.95 0.95 0.5) in cell 99
+
+volFieldValue minPressure write:
+    min(all) of U = (-0.0710809 -0.15319 0)
+
+volFieldValue maxPressure write:
+    max(all) of U = (0.397057 0.15319 0)
+
+Courant Number mean: 0.928698 max: 3.92584
+Time = 2s
+
+smoothSolver:  Solving for Ux, Initial residual = 0.186755, Final residual = 6.08011e-09, No Iterations 10
+smoothSolver:  Solving for Uy, Initial residual = 0.232015, Final residual = 2.20327e-09, No Iterations 11
+DICPCG:  Solving for p, Initial residual = 0.439475, Final residual = 3.11151e-07, No Iterations 18
+DICPCG:  Solving for p, Initial residual = 2.34206e-07, Final residual = 2.34206e-07, No Iterations 0
+time step continuity errors : sum local = 8.93977e-08, global = 5.09575e-18, cumulative = -1.76183e-18
+ExecutionTime = 0.072644 s  ClockTime = 0 s
+
+
+
+volFieldValue minVelocity write:
+    minMag(all) of p = 5.16971e-10 at location (0.05 0.05 0.5) in cell 0
+
+volFieldValue maxVelocity write:
+    maxMag(all) of p = 0.278668 at location (0.95 0.95 0.5) in cell 99
+
+volFieldValue minPressure write:
+    min(all) of U = (-0.12285 -0.245608 0)
+
+volFieldValue maxPressure write:
+    max(all) of U = (0.543995 0.203757 0)
+
+Courant Number mean: 1.36255 max: 5.41149
+Time = 3s
+
+smoothSolver:  Solving for Ux, Initial residual = 0.087204, Final residual = 3.0253e-09, No Iterations 10
+smoothSolver:  Solving for Uy, Initial residual = 0.134955, Final residual = 4.38647e-09, No Iterations 10
+DICPCG:  Solving for p, Initial residual = 0.254101, Final residual = 7.76601e-07, No Iterations 17
+DICPCG:  Solving for p, Initial residual = 6.39253e-07, Final residual = 6.39253e-07, No Iterations 0
+time step continuity errors : sum local = 3.64756e-07, global = -1.23057e-17, cumulative = -1.40675e-17
+ExecutionTime = 0.073442 s  ClockTime = 0 s
+
+
+
+volFieldValue minVelocity write:
+    minMag(all) of p = 9.09631e-09 at location (0.05 0.05 0.5) in cell 0
+
+volFieldValue maxVelocity write:
+    maxMag(all) of p = 0.306587 at location (0.95 0.95 0.5) in cell 99
+
+volFieldValue minPressure write:
+    min(all) of U = (-0.145248 -0.284173 0)
+
+volFieldValue maxPressure write:
+    max(all) of U = (0.580821 0.212866 0)
+
+Courant Number mean: 1.56268 max: 5.86525
+Time = 4s
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0424514, Final residual = 6.76307e-09, No Iterations 9
+smoothSolver:  Solving for Uy, Initial residual = 0.0806519, Final residual = 7.96545e-09, No Iterations 9
+DICPCG:  Solving for p, Initial residual = 0.128239, Final residual = 3.05566e-07, No Iterations 17
+DICPCG:  Solving for p, Initial residual = 2.74148e-07, Final residual = 2.74148e-07, No Iterations 0
+time step continuity errors : sum local = 1.8912e-07, global = -1.37965e-17, cumulative = -2.7864e-17
+ExecutionTime = 0.074199 s  ClockTime = 0 s
+
+
+
+volFieldValue minVelocity write:
+    minMag(all) of p = 5.75013e-09 at location (0.05 0.05 0.5) in cell 0
+
+volFieldValue maxVelocity write:
+    maxMag(all) of p = 0.320905 at location (0.95 0.95 0.5) in cell 99
+
+volFieldValue minPressure write:
+    min(all) of U = (-0.15684 -0.299387 0)
+
+volFieldValue maxPressure write:
+    max(all) of U = (0.594151 0.21474 0)
+
+Courant Number mean: 1.6742 max: 6.03655
+Time = 5s
+
+smoothSolver:  Solving for Ux, Initial residual = 0.026221, Final residual = 3.06748e-09, No Iterations 9
+smoothSolver:  Solving for Uy, Initial residual = 0.0548444, Final residual = 3.47729e-09, No Iterations 9
+DICPCG:  Solving for p, Initial residual = 0.0784614, Final residual = 6.72681e-07, No Iterations 16
+DICPCG:  Solving for p, Initial residual = 6.34855e-07, Final residual = 6.34855e-07, No Iterations 0
+time step continuity errors : sum local = 4.78169e-07, global = 6.39679e-18, cumulative = -2.14672e-17
+ExecutionTime = 0.075338 s  ClockTime = 0 s
+
+
+
+volFieldValue minVelocity write:
+    minMag(all) of p = 2.85e-09 at location (0.05 0.05 0.5) in cell 0
+
+volFieldValue maxVelocity write:
+    maxMag(all) of p = 0.330845 at location (0.95 0.95 0.5) in cell 99
+
+volFieldValue minPressure write:
+    min(all) of U = (-0.166427 -0.315186 0)
+
+volFieldValue maxPressure write:
+    max(all) of U = (0.605362 0.214368 0)
+
+Courant Number mean: 1.75113 max: 6.14736
+Time = 6s
+
+smoothSolver:  Solving for Ux, Initial residual = 0.01698, Final residual = 1.82754e-09, No Iterations 9
+smoothSolver:  Solving for Uy, Initial residual = 0.0371056, Final residual = 2.27008e-09, No Iterations 9
+DICPCG:  Solving for p, Initial residual = 0.0538022, Final residual = 3.80201e-07, No Iterations 16
+DICPCG:  Solving for p, Initial residual = 3.6792e-07, Final residual = 3.6792e-07, No Iterations 0
+time step continuity errors : sum local = 2.92983e-07, global = 3.14419e-18, cumulative = -1.8323e-17
+ExecutionTime = 0.076524 s  ClockTime = 0 s
+
+
+
+volFieldValue minVelocity write:
+    minMag(all) of p = 3.09192e-09 at location (0.05 0.05 0.5) in cell 0
+
+volFieldValue maxVelocity write:
+    maxMag(all) of p = 0.337108 at location (0.95 0.95 0.5) in cell 99
+
+volFieldValue minPressure write:
+    min(all) of U = (-0.171405 -0.328594 0)
+
+volFieldValue maxPressure write:
+    max(all) of U = (0.613648 0.2131 0)
+
+Courant Number mean: 1.80591 max: 6.22263
+Time = 7s
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0120778, Final residual = 7.57582e-09, No Iterations 8
+smoothSolver:  Solving for Uy, Initial residual = 0.0260151, Final residual = 9.24328e-09, No Iterations 8
+DICPCG:  Solving for p, Initial residual = 0.0384717, Final residual = 2.7323e-07, No Iterations 16
+DICPCG:  Solving for p, Initial residual = 2.672e-07, Final residual = 2.672e-07, No Iterations 0
+time step continuity errors : sum local = 2.20125e-07, global = -8.45678e-18, cumulative = -2.67798e-17
+ExecutionTime = 0.077606 s  ClockTime = 0 s
+
+
+
+volFieldValue minVelocity write:
+    minMag(all) of p = 4.78933e-10 at location (0.05 0.05 0.5) in cell 0
+
+volFieldValue maxVelocity write:
+    maxMag(all) of p = 0.340705 at location (0.95 0.95 0.5) in cell 99
+
+volFieldValue minPressure write:
+    min(all) of U = (-0.173971 -0.337667 0)
+
+volFieldValue maxPressure write:
+    max(all) of U = (0.618959 0.211842 0)
+
+Courant Number mean: 1.84523 max: 6.26993
+Time = 8s
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00912929, Final residual = 5.60415e-09, No Iterations 8
+smoothSolver:  Solving for Uy, Initial residual = 0.0188214, Final residual = 6.94232e-09, No Iterations 8
+DICPCG:  Solving for p, Initial residual = 0.0279817, Final residual = 9.76636e-07, No Iterations 15
+DICPCG:  Solving for p, Initial residual = 9.61053e-07, Final residual = 9.61053e-07, No Iterations 0
+time step continuity errors : sum local = 8.18128e-07, global = -1.86483e-17, cumulative = -4.54281e-17
+ExecutionTime = 0.078403 s  ClockTime = 0 s
+
+
+
+volFieldValue minVelocity write:
+    minMag(all) of p = 1.1206e-08 at location (0.05 0.05 0.5) in cell 0
+
+volFieldValue maxVelocity write:
+    maxMag(all) of p = 0.342803 at location (0.95 0.95 0.5) in cell 99
+
+volFieldValue minPressure write:
+    min(all) of U = (-0.175251 -0.343871 0)
+
+volFieldValue maxPressure write:
+    max(all) of U = (0.622345 0.210958 0)
+
+Courant Number mean: 1.8741 max: 6.29931
+Time = 9s
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00693414, Final residual = 4.09884e-09, No Iterations 8
+smoothSolver:  Solving for Uy, Initial residual = 0.0137764, Final residual = 5.18099e-09, No Iterations 8
+DICPCG:  Solving for p, Initial residual = 0.0207627, Final residual = 7.21284e-07, No Iterations 15
+DICPCG:  Solving for p, Initial residual = 7.13469e-07, Final residual = 7.13469e-07, No Iterations 0
+time step continuity errors : sum local = 6.17572e-07, global = 5.04154e-18, cumulative = -4.03865e-17
+ExecutionTime = 0.079362 s  ClockTime = 0 s
+
+
+
+volFieldValue minVelocity write:
+    minMag(all) of p = 7.40206e-09 at location (0.05 0.05 0.5) in cell 0
+
+volFieldValue maxVelocity write:
+    maxMag(all) of p = 0.344136 at location (0.95 0.95 0.5) in cell 99
+
+volFieldValue minPressure write:
+    min(all) of U = (-0.175836 -0.348152 0)
+
+volFieldValue maxPressure write:
+    max(all) of U = (0.624579 0.21043 0)
+
+Courant Number mean: 1.89579 max: 6.31834
+Time = 10s
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00530344, Final residual = 2.99625e-09, No Iterations 8
+smoothSolver:  Solving for Uy, Initial residual = 0.0101527, Final residual = 3.91464e-09, No Iterations 8
+DICPCG:  Solving for p, Initial residual = 0.0153978, Final residual = 5.61045e-07, No Iterations 15
+DICPCG:  Solving for p, Initial residual = 5.56972e-07, Final residual = 5.56972e-07, No Iterations 0
+time step continuity errors : sum local = 4.87401e-07, global = -1.76725e-17, cumulative = -5.8059e-17
+ExecutionTime = 0.080221 s  ClockTime = 0 s
+
+
+
+volFieldValue minVelocity write:
+    minMag(all) of p = 4.37002e-09 at location (0.05 0.05 0.5) in cell 0
+
+volFieldValue maxVelocity write:
+    maxMag(all) of p = 0.345048 at location (0.95 0.95 0.5) in cell 99
+
+volFieldValue minPressure write:
+    min(all) of U = (-0.176034 -0.351134 0)
+
+volFieldValue maxPressure write:
+    max(all) of U = (0.626092 0.210144 0)
+
+End
+

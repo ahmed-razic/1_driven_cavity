@@ -8,11 +8,11 @@
 Build  : 13-cde978a97c93
 Exec   : blockMesh
 Date   : Dec 17 2025
-Time   : 19:51:31
+Time   : 20:28:39
 Host   : "HOME"
-PID    : 7406
+PID    : 17181
 I/O    : uncollated
-Case   : /home/ahmed/OpenFOAM/ahmed-13/run/transitioning/1_driven_cavity/kershaw
+Case   : /home/ahmed/OpenFOAM/ahmed-13/run/transitioning/1_driven_cavity
 nProcs : 1
 sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
 fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
@@ -22,7 +22,7 @@ allowSystemOperations : Allowing user-supplied system call operations
 Create time
 
 Deleting polyMesh directory
-    "/home/ahmed/OpenFOAM/ahmed-13/run/transitioning/1_driven_cavity/kershaw/constant/polyMesh"
+    "/home/ahmed/OpenFOAM/ahmed-13/run/transitioning/1_driven_cavity/constant/polyMesh"
 Reading "blockMeshDict"
 
 Creating block mesh from
@@ -36,8 +36,8 @@ Creating block mesh topology
 
 Basic statistics
     Number of internal faces : 0
-    Number of boundary faces : 12
-    Number of defined boundary faces : 12
+    Number of boundary faces : 6
+    Number of defined boundary faces : 6
     Number of undefined boundary faces : 0
 
 Checking topology
@@ -49,41 +49,25 @@ Creating patches
 Creating cells
 Creating points with scale 1
     Block 0 cell size :
-        i : 0.0375176 .. 0.0375176 0.0364546 .. 0.036666 0.0375176 .. 0.0375176 0.0364546 .. 0.036666 
-        j : 0.025 0.023559 0.025 0.023559 
+        i : 0.1 .. 0.1
+        j : 0.1 .. 0.1
         k : 1
-    Block 1 cell size :
-        i : 0.025 .. 0.025 0.0249892 .. 0.0250827 0.025 .. 0.025 0.0249892 .. 0.0250827 
-        j : 0.00729679 .. 0.0583743 0.00771741 .. 0.0617393 0.00729679 .. 0.0583743 0.00771741 .. 0.0617393 
-        k : 1
-Merging patch pairs 1((interface1 interface2))
-facePatchIntersection: Intersecting 40 source faces and 40 target faces
-    triPatchIntersection: Intersecting 80 source tri faces and 80 target tri faces
-        Source/target coverage = 1/1
-        Faces by number of edges = (0 0 0 80)
-        Edges by number of faces = (0 82 79)
-        80 faces generated in 0.000466s
-    Source/target coverage = 1/1
-    Faces by number of edges = (0 0 0 0 40)
-    Edges by number of faces = (0 82 39)
-    40 couplings generated in 0.000665s
 
 Writing polyMesh
 ----------------
 Mesh Information
 ----------------
   boundingBox: (0 0 0) (1 1 1)
-  nPoints: 3362
-  nCells: 1600
-  nFaces: 6480
-  nInternalFaces: 3120
+  nPoints: 242
+  nCells: 100
+  nFaces: 420
+  nInternalFaces: 180
 ----------------
 Patches
 ----------------
-  patch 0 (start: 3120 size: 40) name: movingWall
-  patch 1 (start: 3160 size: 120) name: fixedWalls
-  patch 2 (start: 3280 size: 1600) name: front
-  patch 3 (start: 4880 size: 1600) name: back
+  patch 0 (start: 180 size: 10) name: movingWall
+  patch 1 (start: 190 size: 30) name: fixedWalls
+  patch 2 (start: 220 size: 200) name: frontAndBack
 
 End
 
