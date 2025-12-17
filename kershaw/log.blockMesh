@@ -1,0 +1,89 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  13
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 13-cde978a97c93
+Exec   : blockMesh
+Date   : Dec 17 2025
+Time   : 19:51:31
+Host   : "HOME"
+PID    : 7406
+I/O    : uncollated
+Case   : /home/ahmed/OpenFOAM/ahmed-13/run/transitioning/1_driven_cavity/kershaw
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Deleting polyMesh directory
+    "/home/ahmed/OpenFOAM/ahmed-13/run/transitioning/1_driven_cavity/kershaw/constant/polyMesh"
+Reading "blockMeshDict"
+
+Creating block mesh from
+    "system/blockMeshDict"
+Creating block edges
+No non-planar block faces defined
+Creating topology blocks
+Creating topology patches
+
+Creating block mesh topology
+
+Basic statistics
+    Number of internal faces : 0
+    Number of boundary faces : 12
+    Number of defined boundary faces : 12
+    Number of undefined boundary faces : 0
+
+Checking topology
+Creating block offsets
+Creating merge list .
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale 1
+    Block 0 cell size :
+        i : 0.0375176 .. 0.0375176 0.0364546 .. 0.036666 0.0375176 .. 0.0375176 0.0364546 .. 0.036666 
+        j : 0.025 0.023559 0.025 0.023559 
+        k : 1
+    Block 1 cell size :
+        i : 0.025 .. 0.025 0.0249892 .. 0.0250827 0.025 .. 0.025 0.0249892 .. 0.0250827 
+        j : 0.00729679 .. 0.0583743 0.00771741 .. 0.0617393 0.00729679 .. 0.0583743 0.00771741 .. 0.0617393 
+        k : 1
+Merging patch pairs 1((interface1 interface2))
+facePatchIntersection: Intersecting 40 source faces and 40 target faces
+    triPatchIntersection: Intersecting 80 source tri faces and 80 target tri faces
+        Source/target coverage = 1/1
+        Faces by number of edges = (0 0 0 80)
+        Edges by number of faces = (0 82 79)
+        80 faces generated in 0.000466s
+    Source/target coverage = 1/1
+    Faces by number of edges = (0 0 0 0 40)
+    Edges by number of faces = (0 82 39)
+    40 couplings generated in 0.000665s
+
+Writing polyMesh
+----------------
+Mesh Information
+----------------
+  boundingBox: (0 0 0) (1 1 1)
+  nPoints: 3362
+  nCells: 1600
+  nFaces: 6480
+  nInternalFaces: 3120
+----------------
+Patches
+----------------
+  patch 0 (start: 3120 size: 40) name: movingWall
+  patch 1 (start: 3160 size: 120) name: fixedWalls
+  patch 2 (start: 3280 size: 1600) name: front
+  patch 3 (start: 4880 size: 1600) name: back
+
+End
+

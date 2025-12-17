@@ -1,0 +1,126 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+   =========                 |
+   \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+    \\    /   O peration     | Website:  https://openfoam.org
+     \\  /    A nd           | Version:  13
+      \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format          ascii;
+    class           dictionary;
+    object          controlDict;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //67686767676767686767674676766766767676767
+
+application         foamRun;
+
+solver              incompressibleFluid;
+
+startFrom           startTime;
+
+startTime           0;
+
+stopAt              endTime;
+
+endTime             10;
+
+deltaT              1;  //0.01;
+
+writeControl        runTime;
+
+writeInterval       1;
+
+purgeWrite          0;
+
+writeFormat         ascii;
+
+writePrecision      6;
+
+writeCompression    off;
+
+timeFormat          general;
+
+timePrecision       6;
+
+runTimeModifiable   true;   //controlDict is re-read before each time step allowing to modify parameterrs during simulation
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+functions
+{
+    minmaxDomainScalar
+    {
+        type            volFieldValue;
+
+        libs            ("libfieldFunctionObjects.so");
+
+        log             true;   //writes to screen
+
+        writeControl    timeStep;
+
+        writeInterval   1;
+
+        writeFields     false;
+
+        select          all;
+
+        operation       none;
+
+        fields  
+        (
+            U
+        );
+    }
+
+    minmaxDomainVector
+    {
+        type            volFieldValue;
+
+        libs            ("libfieldFunctionObjects.so");
+
+        log             true;   //writes to screen
+
+        writeControl    timeStep;
+
+        writeInterval   1;
+
+        writeFields     false;
+
+        select          all;
+
+        operation       none;
+
+        fields
+        (
+            p
+        );
+    }
+
+    minVelocity
+    {
+        $minmaxDomainVector;
+        operation   minMag;
+    }
+
+    maxVelocity
+    {
+        $minmaxDomainVector;
+        operation   maxMag;
+    }
+
+    minPressure
+    {
+        $minmaxDomainScalar;
+        operation   min;
+    }
+
+    maxPressure
+    {
+        $minmaxDomainScalar;
+        operation   max;
+    }
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
