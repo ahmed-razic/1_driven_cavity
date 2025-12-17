@@ -8,9 +8,9 @@
 Build  : 13-cde978a97c93
 Exec   : blockMesh
 Date   : Dec 17 2025
-Time   : 12:44:50
+Time   : 13:49:08
 Host   : "DESKTOP-2JS98RS"
-PID    : 6641
+PID    : 19757
 I/O    : uncollated
 Case   : /home/ahmed/OpenFOAM/ahmed-13/run/transitioning/1_driven_cavity/orthogonal
 nProcs : 1
@@ -21,8 +21,6 @@ allowSystemOperations : Allowing user-supplied system call operations
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 Create time
 
-Deleting polyMesh directory
-    "/home/ahmed/OpenFOAM/ahmed-13/run/transitioning/1_driven_cavity/orthogonal/constant/polyMesh"
 Reading "blockMeshDict"
 
 Creating block mesh from
@@ -49,8 +47,8 @@ Creating patches
 Creating cells
 Creating points with scale 1
     Block 0 cell size :
-        i : 0.05 .. 0.05
-        j : 0.05 .. 0.05
+        i : 0.1 .. 0.1
+        j : 0.1 .. 0.1
         k : 1
 
 Writing polyMesh
@@ -58,16 +56,16 @@ Writing polyMesh
 Mesh Information
 ----------------
   boundingBox: (0 0 0) (1 1 1)
-  nPoints: 882
-  nCells: 400
-  nFaces: 1640
-  nInternalFaces: 760
+  nPoints: 242
+  nCells: 100
+  nFaces: 420
+  nInternalFaces: 180
 ----------------
 Patches
 ----------------
-  patch 0 (start: 760 size: 20) name: movingWall
-  patch 1 (start: 780 size: 60) name: fixedWalls
-  patch 2 (start: 840 size: 800) name: frontAndBack
+  patch 0 (start: 180 size: 10) name: movingWall
+  patch 1 (start: 190 size: 30) name: fixedWalls
+  patch 2 (start: 220 size: 200) name: frontAndBack
 
 End
 

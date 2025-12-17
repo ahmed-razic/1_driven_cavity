@@ -8,9 +8,9 @@
 Build  : 13-cde978a97c93
 Exec   : checkMesh
 Date   : Dec 17 2025
-Time   : 12:44:50
+Time   : 13:49:08
 Host   : "DESKTOP-2JS98RS"
-PID    : 6643
+PID    : 19759
 I/O    : uncollated
 Case   : /home/ahmed/OpenFOAM/ahmed-13/run/transitioning/1_driven_cavity/orthogonal
 nProcs : 1
@@ -26,11 +26,11 @@ Create mesh for time = 0
 Time = 0s
 
 Mesh stats
-    points:           882
+    points:           242
     internal points:  0
-    faces:            1640
-    internal faces:   760
-    cells:            400
+    faces:            420
+    internal faces:   180
+    cells:            100
     faces per cell:   6
     boundary patches: 3
     point zones:      0
@@ -38,7 +38,7 @@ Mesh stats
     cell zones:       0
 
 Overall number of cells of each type:
-    hexahedra:     400
+    hexahedra:     100
     prisms:        0
     wedges:        0
     pyramids:      0
@@ -56,23 +56,23 @@ Checking topology...
 
 Checking patch topology for multiply connected surfaces...
     Patch               Faces    Points   Surface topology                  
-    movingWall          20       42       ok (non-closed singly connected)  
-    fixedWalls          60       122      ok (non-closed singly connected)  
-    frontAndBack        800      882      ok (non-closed singly connected)  
+    movingWall          10       22       ok (non-closed singly connected)  
+    fixedWalls          30       62       ok (non-closed singly connected)  
+    frontAndBack        200      242      ok (non-closed singly connected)  
 
 Checking geometry...
     Overall domain bounding box (0 0 0) (1 1 1)
     Mesh has 2 geometric (non-empty/wedge) directions (1 1 0)
     Mesh has 2 solution (non-empty) directions (1 1 0)
     All edges aligned with or perpendicular to non-empty directions.
-    Max cell openness = 8.67361738e-17 OK.
+    Max cell openness = 8.67362e-17 OK.
     Max aspect ratio = 1 OK.
-    Minimum face area = 0.0025. Maximum face area = 0.05.  Face area magnitudes OK.
-    Min volume = 0.0025. Max volume = 0.0025.  Total volume = 1.  Cell volumes OK.
+    Minimum face area = 0.01. Maximum face area = 0.1.  Face area magnitudes OK.
+    Min volume = 0.01. Max volume = 0.01.  Total volume = 1.  Cell volumes OK.
     Mesh non-orthogonality Max: 0 average: 0
     Non-orthogonality check OK.
     Face pyramids OK.
-    Max skewness = 8.883952601e-15 OK.
+    Max skewness = 4.44089e-15 OK.
     Coupled point location match (average 0) OK.
 
 Mesh OK.

@@ -24,7 +24,7 @@ startTime           0;
 
 stopAt              endTime;
 
-endTime             50;
+endTime             10;
 
 deltaT              1;  //0.01;
 
@@ -36,7 +36,7 @@ purgeWrite          0;
 
 writeFormat         ascii;
 
-writePrecision      10;
+writePrecision      6;
 
 writeCompression    off;
 
@@ -62,7 +62,7 @@ functions
 
         writeInterval   1;
 
-        writeFields     true;
+        writeFields     false;
 
         select          all;
 
@@ -86,7 +86,7 @@ functions
 
         writeInterval   1;
 
-        writeFields     true;
+        writeFields     false;
 
         select          all;
 

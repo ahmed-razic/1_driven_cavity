@@ -22,8 +22,8 @@ xmax                1;
 ymax                1;
 zmax                1;
 
-xcells              20;
-ycells              20;
+xcells              10;
+ycells              10;
 zcells              1;
 
 /*
