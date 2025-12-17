@@ -15,7 +15,7 @@ set terminal qt 1
 set grid xtics
 set grid ytics
 
-set key left
+set key right
 set xlabel "X centerline"
 set ylabel "Uy"
 
